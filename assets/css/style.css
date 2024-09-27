@@ -53,9 +53,12 @@
     /**
      * typography
      */
+
+
   
     /* font-family */
     --ff-lato: 'Lato', sans-serif;
+    
   
     /* font-size */
     --fs-1: 24px;
@@ -89,8 +92,10 @@
   
     --transition-1: 0.25s ease;
     --transition-2: 0.5s ease-in-out;
+    
   
   }
+
   
   /*-----------------------------------*\
     #RESET
@@ -135,6 +140,26 @@
   body { background: var(--smoky-black); }
 
   
+.h2,
+.h3,
+.h4,
+.h5 {
+  color: var(--white-2);
+  text-transform: capitalize;
+}
+
+.h2 { font-size: var(--fs-1); }
+
+.h3 { font-size: var(--fs-2); }
+
+.h4 { font-size: var(--fs-4); }
+
+.h5 {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
+  
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -151,196 +176,124 @@ main {
     height: 100vh; /
   }
   
-  
-
-.focus2 {
-    font-family: var(--ff-lato);
-    font-size: 200px;
-    font-weight: var(--fw-500);
-    letter-spacing: 5px;
-    color: #ffffff;
-
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100%;
-  }
-
-    .focus2 span{ 
-      text-transform: uppercase;
-      animation: animate 2s linear infinite;
-    }
-    .focus2 .space {
-      width: 40px;
-      display: inline-block;
-  }
-
-    .focus2 span:nth-child(1){
-      animation-delay: 0s;
-    }
-    .focus2 span:nth-child(2){
-      animation-delay: 0.1s;
-    }
-    .focus2 span:nth-child(3){
-      animation-delay: 0.2s;
-    }
-    .focus2 span:nth-child(4){
-      animation-delay: 0.3s;
-    }
-    .focus2 span:nth-child(5){
-      animation-delay: 0.4s;
-    }
-    .focus2 span:nth-child(6){
-      animation-delay: 0.5s;
-    }
-    .focus2 span:nth-child(7){
-      animation-delay: 0.6s;
-    }
-    .focus2 span:nth-child(8){
-      animation-delay: 0.7s;
-    }
-    .focus2 span:nth-child(9){
-      animation-delay: 0.8s;
-    }
-    .focus2 span:nth-child(10){
-      animation-delay: 0.9s;
-    }
-
-    @keyframes animate{
-      0%{
-        filter: blur(0);
-      }
-      40%{
-        filter: blur(20px);
-      }
-      80%{
-        filter: blur(0);
-      }
-      100%{
-        filter: blur(0);
-      }
-    }
-
-  @media (max-width: 600px) { /* Dispositivos moviles */
-  .focus2 {
-    font-family: Indigo Regular;
-    
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: #ffffff;
-  }
-
-    .focus2 span{ 
-      text-transform: uppercase;
-      animation: animate 2s linear infinite;
-    }
-
-    .focus2 span:nth-child(1){
-      animation-delay: 0s;
-    }
-    .focus2 span:nth-child(2){
-      animation-delay: 0.1s;
-    }
-    .focus2 span:nth-child(3){
-      animation-delay: 0.2s;
-    }
-    .focus2 span:nth-child(4){
-      animation-delay: 0.3s;
-    }
-    .focus2 span:nth-child(5){
-      animation-delay: 0.4s;
-    }
-    .focus2 span:nth-child(6){
-      animation-delay: 0.5s;
-    }
-    .focus2 span:nth-child(7){
-      animation-delay: 0.6s;
-    }
-    .focus2 span:nth-child(8){
-      animation-delay: 0.7s;
-    }
-    .focus2 span:nth-child(9){
-      animation-delay: 0.8s;
-    }
-    .focus2 span:nth-child(10){
-      animation-delay: 0.9s;
-    }
-
-    @keyframes animate{
-      0%{
-        filter: blur(0);
-      }
-      40%{
-        filter: blur(10px);
-      }
-      80%{
-        filter: blur(0);
-      }
-      100%{
-        filter: blur(0);
-      }
-    }
+  /* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evita que el contenido detrás se pueda ver inicialmente */
 }
 
-@media (max-width: 366px) { /* Dispositivos moviles mas pequeños*/
-  .focus2 {
-    font-family: Indigo Regular;
-    
-    font-size: 19px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #ffffff;
+/* Transición de desvanecimiento */
+#lottie-container, #content {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Transición suave de 1 segundo */
+}
+
+#lottie-container.hidden, #content.show {
+  opacity: 0; /* Oculta el contenedor de Lottie */
+}
+#content.show {
+  opacity: 1; /* Muestra el contenido de la página con desvanecimiento */
+}
+
+#lottie-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Asegura que esté por encima del contenido de la página */
+}
+
+dotlottie-player {
+  width: 100%;
+  height: 80%;
+}
+
+#load-btn {
+  font-family: var(--ff-lato);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-700);
+  position: relative;
+  width: 175px;
+  height: 50px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  color: #c0a6ff;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#load-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 184px;
+  height: 60px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #554dde 0%, #c0a6ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#load-btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #554dde 0%, #c0a6ff 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+#load-btn:hover::after {
+  filter: blur(30px);
+}
+
+#load-btn:hover::before {
+  transform: rotate(-180deg);
+}
+
+#load-btn:active::before {
+  scale: 0.7;
+}
+
+
+/* Estilos para cuando se oculta el contenedor de carga */
+#content {
+  display: none;
+  opacity: 0; /* Oculto inicialmente con opacidad */
+  height: 100%; /* Ocupa toda la pantalla */
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  #lottie-container {
+    flex-direction: column;
+    justify-content:flex-start;
   }
 
-    .focus2 span{ 
-      text-transform: uppercase;
-      animation: animate 2s linear infinite;
-    }
+  dotlottie-player {
+    height: 50%; /* En móviles el Lottie ocupará menos espacio */
+  }
 
-    .focus2 span:nth-child(1){
-      animation-delay: 0s;
-    }
-    .focus2 span:nth-child(2){
-      animation-delay: 0.1s;
-    }
-    .focus2 span:nth-child(3){
-      animation-delay: 0.2s;
-    }
-    .focus2 span:nth-child(4){
-      animation-delay: 0.3s;
-    }
-    .focus2 span:nth-child(5){
-      animation-delay: 0.4s;
-    }
-    .focus2 span:nth-child(6){
-      animation-delay: 0.5s;
-    }
-    .focus2 span:nth-child(7){
-      animation-delay: 0.6s;
-    }
-    .focus2 span:nth-child(8){
-      animation-delay: 0.7s;
-    }
-    .focus2 span:nth-child(9){
-      animation-delay: 0.8s;
-    }
-    .focus2 span:nth-child(10){
-      animation-delay: 0.9s;
-    }
-
-    @keyframes animate{
-      0%{
-        filter: blur(0);
-      }
-      40%{
-        filter: blur(10px);
-      }
-      80%{
-        filter: blur(0);
-      }
-      100%{
-        filter: blur(0);
-      }
-    }
+  #load-btn {
+    margin-top: 10px;
+  }
 }
+
