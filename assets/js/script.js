@@ -1,22 +1,38 @@
 'use strict';
 
-// Función para ocultar la animación y mostrar el contenido principal con transición suave
-document.getElementById('load-btn').addEventListener('click', function() {
-  // Inicia el desvanecimiento del contenedor Lottie
-  document.getElementById('lottie-container').classList.add('hidden');
-  
-  // Después de 1 segundo (la duración de la transición), muestra el contenido principal
-  setTimeout(function() {
-    document.getElementById('lottie-container').style.display = 'none'; // Oculta el contenedor de Lottie
-    document.getElementById('content').style.display = 'block'; // Muestra el contenido
-    document.getElementById('content').classList.add('show'); // Aplica la clase para que aparezca con transición
-  }, 1000); // Coincide con la duración de la transición (1s)
-});
+// Variables
+const avatarBox = document.getElementById('avatar-box');
+const avatarImage = document.getElementById('avatar-image');
+
+// Imágenes que se alternarán
+const images = [
+  '../assets/images/DG.png', // Imagen original
+  '../assets/images/logo-dg.svg' // Otra imagen o SVG
+];
+
+let currentImageIndex = 0;
+
+// Función para alternar la imagen con el giro
+function flipImage() {
+  // Cambia a la siguiente imagen
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+
+  // Añade la clase para el giro
+  avatarBox.classList.add('flip');
+
+  // Espera hasta que la animación termine (1s) y luego cambia la imagen
+  setTimeout(() => {
+    avatarImage.src = images[currentImageIndex];
+    avatarBox.classList.remove('flip');
+  }, 500); // Coincide con la duración de la animación en CSS (1s)
+}
+
+// Ejecuta el giro y cambio de imagen cada 5 segundos
+setInterval(flipImage, 5000);
+
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/ico.png" type="image/x-icon" />
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!--
+    - #MAIN
+  -->
+  <main>
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box" id="avatar-box">
+          <img src="../assets/images/DG.png" alt="Diego Guzmán" width="80" id="avatar-image" />
+        </figure>
+      
+        <div class="info-content">
+          <h1 class="name" title="Diego Guzmán">Diego Guzmán</h1>
+          <p class="title">Diseñador Web</p>
+        </div>
+      
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar más información</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+               <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M2 11.25C2 8.35 4.015 6 6.5 6S11 8.35 11 11.25V20H4.233C3 20 2 18.834 2 17.395z" opacity="0.5"/><path fill="currentColor" d="M11 11.25V20h8.793C21.012 20 22 18.847 22 17.425V11.25C22 8.35 19.985 6 17.5 6h-11C8.985 6 11 8.35 11 11.25" opacity="0.8"/><path fill="currentColor" d="M9.5 20v2a.75.75 0 0 0 1.5 0v-2zm5.5 0h-1.5v2a.75.75 0 0 0 1.5 0z"/><path fill="currentColor" fill-rule="evenodd" d="M4.25 16a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75m13.135-9.415l.256-.052a2.2 2.2 0 0 1 1.24.115c.69.277 1.446.328 2.165.148l.061-.015c.524-.131.893-.618.893-1.178v-2.13c0-.738-.664-1.282-1.355-1.109c-.396.1-.812.071-1.193-.081l-.073-.03a3.5 3.5 0 0 0-2-.185l-.449.09c-.54.108-.93.6-.93 1.17v6.953c0 .397.31.719.692.719a.706.706 0 0 0 .693-.72z" clip-rule="evenodd"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Correo</p>
+
+              <a href="mailto:diegochristopher34@gmail.com" class="contact-link">diegochristopher34@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="m16.1 13.359l.456-.453c.63-.626 1.611-.755 2.417-.317l1.91 1.039c1.227.667 1.498 2.302.539 3.255l-1.42 1.412c-.362.36-.81.622-1.326.67c-1.192.111-3.645.051-6.539-1.643zm-5.91-5.876l.287-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.065 1.14.453 3.22 2.149 5.776z" clip-rule="evenodd"/><path fill="currentColor" d="M12.063 11.497c-2.946-2.929-1.88-4.008-1.873-4.015l-4.039 4.04c.667 1.004 1.535 2.081 2.664 3.204c1.14 1.134 2.26 1.975 3.322 2.596L16.1 13.36s-1.082 1.076-4.037-1.862" opacity="0.6"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Celular</p>
+
+              <a href="tel:+50373338563" class="contact-link">+503 7333-8563</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M11.25 2c-4.219.004-6.401.08-7.786 1.464C2.08 4.85 2.004 7.031 2 11.25h4.914a4 4 0 0 1-.757-1.528C5.62 7.57 7.57 5.62 9.722 6.157c.572.143 1.09.406 1.528.757zM2 12.75c.004 4.218.08 6.4 1.464 7.785C4.85 21.92 7.031 21.995 11.25 22v-7.877A4.75 4.75 0 0 1 7 16.75a.75.75 0 0 1 0-1.5a3.25 3.25 0 0 0 3.163-2.5zM12.75 22c4.218-.005 6.4-.08 7.785-1.465c1.385-1.384 1.46-3.567 1.465-7.785h-8.163A3.25 3.25 0 0 0 17 15.25a.75.75 0 0 1 0 1.5a4.75 4.75 0 0 1-4.25-2.627zM22 11.25c-.005-4.219-.08-6.401-1.465-7.786C19.151 2.08 16.968 2.004 12.75 2v4.914a4 4 0 0 1 1.527-.757c2.153-.538 4.104 1.412 3.565 3.565a4 4 0 0 1-.756 1.528z"/><path fill="currentColor" d="M9.358 7.613a2.5 2.5 0 0 1 1.892 2.422v1.215h-1.215a2.5 2.5 0 0 1-2.422-1.892a1.44 1.44 0 0 1 1.745-1.745m3.392 2.422v1.215h1.215c1.145 0 2.144-.78 2.422-1.892a1.44 1.44 0 0 0-1.746-1.745a2.5 2.5 0 0 0-1.891 2.422"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="1999-09-19">Septiembre 19, 1999</time>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity="0.5"/><path fill="currentColor" d="M12 8.512a3.488 3.488 0 1 0 0 6.976a3.488 3.488 0 0 0 0-6.976M12.75 2a.75.75 0 0 0-1.5 0v2.035a8 8 0 0 1 1.5 0zm7.215 10.75a8 8 0 0 0 0-1.5H22a.75.75 0 0 1 0 1.5zm-8.715 7.215a8 8 0 0 0 1.5 0V22a.75.75 0 0 1-1.5 0zM4.035 11.25a8 8 0 0 0 0 1.5H2a.75.75 0 0 1 0-1.5z"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>San Salvador, El Salvador</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a target="_blank" href="https://www.instagram.com/dgco23/?utm_source=ig_web_button_share_sheet" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="5.2s" dur="0.6s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="72" stroke-dashoffset="72" d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="2.4s" values="72;0"/></path><path stroke-dasharray="28" stroke-dashoffset="28" d="M12 8c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="2.8s" dur="2.4s" values="28;0"/></path></g></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>Sobre Mí</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portafolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Trayectoria</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contacto</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="sobre mí">
+        <header>
+          <h2 class="h2 article-title">Sobre Mí</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            ¡Hola! Soy Diego Guzmán, actualmente tengo 25 años de edad, estoy
+            en mi quinto año de la carrera de Diseño Gráfico Web Multimedia.
+            Me considero una persona autodidacta y creativa. Desde el inicio
+            de mi bachillerato tuve una breve introducción sobre el diseño UI
+            y UX, siendo mi primer acercamiento e interés al área del diseño
+          </p>
+
+          <p>
+            En ese tiempo aprendí conceptos más por el lado de la programación
+            con distintos lenguajes y la funcionalidad de aplicaciones.
+            Actualmente me sigo desarrollando en el área de diseño,
+            perfeccionando mis habilidades.
+          </p>
+        </section>
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+          <h3 class="h3 service-title">Qué hago?</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="../assets/images/icon-design.svg
+                " alt="Design web icon" width="100" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Diseño Web</h4>
+
+                <p class="service-item-text">
+                  Mi objetivo es hacer que los sitios sean atractivos,
+                  intuitivos y eficientes para los usuarios en diversas
+                  plataformas y dispositivos.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="../assets/images/icon-marketing.svg" alt="Marketing icon" width="100" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Publicidad</h4>
+
+                <p class="service-item-text">
+                  Creo publicaciones visualmente atractivas y persuasivas con
+                  el objetivo de promocionar productos o servicios, captar la
+                  atención del público y generar interacción.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="../assets/images/icon-animated.svg" alt="Marketing icon" width="100" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Animaciones</h4>
+
+                <p class="service-item-text">
+                  Creo pequeñas animaciones que aportan dinamismo a los proyectos, enfocándome en el movimiento de textos, elementos gráficos y transiciones para mejorar la experiencia visual.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="../assets/images/icon-logo.svg" alt="Marketing icon" width="100" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Identidad Visual</h4>
+
+                <p class="service-item-text">
+                  Desarrollo identidades visuales para eventos y marcas, creando logotipos y elementos gráficos que transmiten el mensaje clave de manera clara, memorable y coherente con los valores de cada proyecto.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portafolio" data-page="portafolio">
+        <header>
+          <h2 class="h2 article-title">Portafolio</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            El nombre <strong>"CO"</strong> es una simplificación de "Hierba de Corazón", y está inspirado en la Hierba de Corazón del universo de Wakanda de Marvel. He elegido este nombre porque captura la esencia de cómo quiero presentar mi trabajo en diseño gráfico.
+La Hierba de Corazón en los cómics de Marvel otorga habilidades mejoradas y permite al portador acceder a un plano trascendental conocido como el Plano Astral. De manera similar, <strong>CO</strong> sería ese acceso a ese plano para mostrar a las personas mis proyectos a lo largo de mi carrera.
+
+          </p>
+        </section>
+<!--
+        - #PORTFOLIO
+      -->
+        <section class="projects">
+          <!--
+        
+      -->
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Todos</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Logos</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Contenido para redes</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Diseño Web</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>
+                Selecciona una categoria
+              </div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>Todos</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Logos</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Contenido para redes</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Diseño Web</button>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+      </article>
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="trayectoria">
+        <header>
+          <h2 class="h2 article-title">Trayectoria</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M2 16.144V4.998c0-1.098.886-1.99 1.982-1.923c.977.06 2.131.179 3.018.413c1.05.276 2.296.866 3.282 1.388A3.5 3.5 0 0 0 12 5.275v15.2a3.46 3.46 0 0 1-1.628-.406c-1-.532-2.29-1.15-3.372-1.435c-.877-.232-2.016-.35-2.985-.411C2.906 18.153 2 17.255 2 16.143" clip-rule="evenodd" opacity="0.5"/><path fill="currentColor" d="M22 16.144V4.934c0-1.073-.846-1.953-1.918-1.916c-1.129.04-2.535.156-3.582.47c-.908.271-1.965.816-2.826 1.315A3.5 3.5 0 0 1 12 5.275v15.2c.56 0 1.121-.136 1.628-.406c1-.532 2.29-1.15 3.372-1.435c.877-.232 2.016-.35 2.985-.411c1.109-.07 2.015-.968 2.015-2.08"/></svg>
+            </div>
+
+            <h3 class="h3">Educación</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                Universidad Francisco Gavidia
+              </h4>
+
+              <span>2020 — Actualidad</span>
+
+              <p class="timeline-text">
+                Agradecido con Dios por la oportunidad de obtener una beca y poder estudiar una carrera universitaria, que me ha permitido avanzar en mi carrera profesional. Durante mi formación en la Lic. en Diseño Web Gráfico Web Multimedia, he adquirido conocimientos en diversas áreas del diseño gráfico y desarrollo digital.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Cursos en línea</h4>
+
+              <span>2019</span>
+
+              <p class="timeline-text">
+                Antes de iniciar mi carrera universitaria, realicé diversos cursos en el área de diseño y desarrollo web para obtener una base sólida. Estos cursos me permitieron explorar conocimientos en HTML, CSS, JS y frameworks que, hasta hoy, han sido clave para reforzar y complementar mi formación académica y profesional.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                Bachillerato Técnico en Desarrollo de Software
+              </h4>
+
+              <span>2016 — 2018</span>
+
+              <p class="timeline-text">
+                Durante esta etapa, comprendí el funcionamiento de diferentes sistemas y cómo implementarlos, así como el proceso interno detrás de una página web. Aunque sentía que me faltaba profundizar en el área visual, aquí nació mi pasión por la multimedia y el diseño web. Además, tener conocimientos en desarrollo y lógica me brindó un valor añadido al momento de crear no solo diseños atractivos, sino también funcionales.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 16c-5.76 0-6.78-5.74-6.96-10.294c-.05-1.266-.076-1.9.4-2.485c.476-.586 1.045-.682 2.184-.874A26.4 26.4 0 0 1 12 2c1.783 0 3.253.157 4.377.347c1.138.192 1.708.288 2.183.874c.476.586.451 1.219.4 2.485C18.78 10.259 17.76 16 12 16" opacity="0.5"/><path fill="currentColor" d="m17.64 12.422l2.817-1.565c.752-.418 1.128-.627 1.336-.979C22 9.526 22 9.096 22 8.235v-.073c0-1.043 0-1.565-.283-1.958s-.778-.558-1.768-.888L19 5l-.017.085q-.008.283-.022.621c-.088 2.225-.377 4.733-1.32 6.716M5.04 5.706c.087 2.225.376 4.733 1.32 6.716l-2.817-1.565c-.752-.418-1.129-.627-1.336-.979S2 9.096 2 8.235v-.073c0-1.043 0-1.565.283-1.958s.778-.558 1.768-.888L5 5l.017.087q.008.281.022.62"/><path fill="currentColor" fill-rule="evenodd" d="M5.25 22a.75.75 0 0 1 .75-.75h12a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/><path fill="currentColor" d="M15.458 21.25H8.543l.297-1.75a1 1 0 0 1 .98-.804h4.36a1 1 0 0 1 .981.804z" opacity="0.5"/><path fill="currentColor" d="M12 16q-.39 0-.75-.034v2.73h1.5v-2.73A8 8 0 0 1 12 16"/><path fill="currentColor" fill-rule="evenodd" d="M12.787 5.807a.75.75 0 0 1 .463.693v4a.75.75 0 0 1-1.5 0V8.31l-.22.22a.75.75 0 1 1-1.06-1.06l1.5-1.5a.75.75 0 0 1 .817-.163" clip-rule="evenodd"/></svg>
+            </div>
+
+            <h3 class="h3">Experiencia</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Pasantia: Instituto Salvadoreño de Turismo.</h4>
+
+              <span>2024</span>
+
+              <p class="timeline-text">
+                Creé contenido multimedia para redes sociales y comunicación interna, mejorando la presencia en línea del instituto y su interacción con el público.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Proyecto: Icevilatinoamerica</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                Desarrollo y mantenimiento de la página web icevilatinoamerica.org, una ONG que actualiza su contenido, delegados por país y proyectos para reflejar sus iniciativas y actividades.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Práctica: Cromatica UFG</h4>
+
+              <span>2022</span>
+
+              <p class="timeline-text">
+                Creé publicaciones e interactué con estudiantes a través de las redes sociales, además de colaborar en el Día del Diseñador.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">Mis habilidades</h3>
+
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Diseño Web</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe Ilustrator</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe Photoshop</h5>
+                <data value="90">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe After Effects & Adobe Premiere</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Experiencia con IA generativas de imágenes & textos</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title"></h3>
+
+          <ul class="skills-list content-card">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"><path stroke-dasharray="2 4" stroke-dashoffset="6" d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9"><animate attributeName="stroke-dashoffset" dur="0.6s" repeatCount="indefinite" values="6;0"/></path><path stroke-dasharray="32" stroke-dashoffset="32" d="M12 21c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.1s" dur="0.4s" values="32;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M12 8v7.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="10;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 15.5l3.5 -3.5M12 15.5l-3.5 -3.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" values="6;0"/></path></g></svg>
+              </div>
+  
+              <h3 class="h3"><a target="_blank" href="https://onedrive.live.com/?authkey=%21AGwn1tw7siMbANk&id=1AE1520D5530DD58%2141687&cid=1AE1520D5530DD58&parId=root&parQt=sharedby&o=OneUp" download="CV-DiegoGuzmán">Descargar hoja de vida</a></h3>
+
+
+
+            </div>
+
+           
+
+              
+
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="../assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    Design conferences in 2022
+                  </h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt,
+                    explicabo.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="../assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    Best fonts every designer
+                  </h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis
+                    est eligendi.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="../assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis
+                    nostrum exercitationem ullam corporis suscipit.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="../assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    UI interactions of the week
+                  </h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis
+                    nostrud exercitation ullamco laboris nisi.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="../assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    The forgotten art of spacing
+                  </h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="../assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy" />
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat,
+                    velit esse cillum.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contacto">
+        <header>
+          <h2 class="h2 article-title">Contacto</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7753.407569250667!2d-89.19482570023192!3d13.675767333311004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2ssv!4v1728624834099!5m2!1ses-419!2ssv" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Formulario de contacto</h3>
+
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Nombre Completo" required data-form-input />
+
+              <input type="email" name="email" class="form-input" placeholder="Dirección de correo" required
+                data-form-input />
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Escríbeme tu mensaje" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="m16.245 7.76l5.172-5.171l-.003-.003c-1.187-1.187-3.436-.438-7.935 1.062L8.33 5.364C4.7 6.574 2.885 7.18 2.37 8.067a2.72 2.72 0 0 0 0 2.73c.515.888 2.33 1.493 5.96 2.704c.45.15.957.042 1.294-.291l5.506-5.455a.79.79 0 0 1 1.116.005" clip-rule="evenodd"/><path fill="currentColor" d="m18.635 15.67l1.717-5.15c1.498-4.495 2.248-6.744 1.064-7.932l-5.172 5.171a.79.79 0 0 1-.005 1.117l-5.416 5.367a1.4 1.4 0 0 0-.324 1.426c1.21 3.631 1.815 5.446 2.703 5.962a2.71 2.71 0 0 0 2.73 0c.888-.516 1.493-2.33 2.703-5.962" opacity="0.5"/></svg>
+              <span>Enviar mensaje</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
