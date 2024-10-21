@@ -41,44 +41,45 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+// Variables para la sección de portafolio
+const portfolioItem = document.querySelectorAll(".project-item");
+const modalContainerPortfolio = document.querySelector("[data-modal-container-portfolio]");
+const modalCloseBtnPortfolio = document.querySelector("[data-modal-close-btn-portfolio]");
+const overlayPortfolio = document.querySelector("[data-overlay-portfolio]");
 
+// Variables para el contenido del modal
+const modalImgPortfolio = document.querySelector("[data-modal-img-portfolio]");
+const modalTitlePortfolio = document.querySelector("[data-modal-title-portfolio]");
+const modalCategoryPortfolio = document.querySelector("[data-modal-category-portfolio]");
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
+// Función para alternar el modal
+const portfolioModalFunc = function () {
+  modalContainerPortfolio.classList.toggle("active");
+  overlayPortfolio.classList.toggle("active");
+};
 
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+// Agregar eventos de clic a cada elemento del portafolio
+for (let i = 0; i < portfolioItem.length; i++) {
 
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+  portfolioItem[i].addEventListener("click", function (event) {
+    event.preventDefault(); // Evita la navegación predeterminada del enlace
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+    // Asigna la imagen principal del portafolio (segundo <img> dentro de .project-img) al modal
+    const mainImage = this.querySelectorAll("img")[1]; // Selecciona la segunda imagen (logo-1.png)
+    modalImgPortfolio.src = mainImage.src; // Toma la src de la imagen principal
+    modalImgPortfolio.alt = mainImage.alt; // Toma el alt de la imagen principal
+    modalTitlePortfolio.innerHTML = this.querySelector(".project-title").innerHTML; // Toma el título del portafolio
 
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
+    // Muestra el modal
+    portfolioModalFunc();
   });
 
 }
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+// Cerrar el modal cuando se hace clic en el botón de cerrar o en el overlay
+modalCloseBtnPortfolio.addEventListener("click", portfolioModalFunc);
+overlayPortfolio.addEventListener("click", portfolioModalFunc);
+
 
 
 
@@ -109,7 +110,7 @@ const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
 
-    if (selectedValue === "all") {
+    if (selectedValue === "todos") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
       filterItems[i].classList.add("active");
