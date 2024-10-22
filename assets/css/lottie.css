@@ -3,8 +3,11 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden; /* Evita que el contenido detrás se vea inicialmente */
+    
   }
-  
+  #lottie-container-mobil {
+    display: none;
+  }
   #lottie-container {
     position: fixed;
     top: 0;
@@ -95,16 +98,27 @@ body, html {
   
   /* Estilos para móviles */
   @media (max-width: 768px) {
-    #lottie-container {
-      flex-direction: column;
-      justify-content:flex-start;
-    }
-  
-    dotlottie-player {
-      height: 50%; /* En móviles el Lottie ocupará menos espacio */
-    }
+   #lottie-container {
+    display: none;
+  }
+     /* Mostramos el contenedor exclusivo para móviles */
+  #lottie-container-mobil {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Ajustamos el tamaño del Lottie en móviles */
+  dotlottie-player {
+    width: 92%; /* En móviles el Lottie ocupará menos espacio */
+  }
   
     #load-btn {
       margin-top: 10px;
+      font-family: var(--ff-lato);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
     }
   }
