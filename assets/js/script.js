@@ -43,6 +43,7 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 // Variables para la sección de portafolio
 const portfolioItem = document.querySelectorAll(".project-item");
+const modalTimePortfolio = document.querySelector("time[data-modal-time]");
 const modalContainerPortfolio = document.querySelector("[data-modal-container-portfolio]");
 const modalCloseBtnPortfolio = document.querySelector("[data-modal-close-btn-portfolio]");
 const overlayPortfolio = document.querySelector("[data-overlay-portfolio]");
@@ -51,6 +52,8 @@ const overlayPortfolio = document.querySelector("[data-overlay-portfolio]");
 const modalImgPortfolio = document.querySelector("[data-modal-img-portfolio]");
 const modalTitlePortfolio = document.querySelector("[data-modal-title-portfolio]");
 const modalCategoryPortfolio = document.querySelector("[data-modal-category-portfolio]");
+const modalDescription = document.querySelector("[data-modal-text] p");
+const modalIconContainer = document.querySelector("[data-modal-icon]"); // Contenedor para el SVG
 
 // Función para alternar el modal
 const portfolioModalFunc = function () {
@@ -59,22 +62,31 @@ const portfolioModalFunc = function () {
 };
 
 // Agregar eventos de clic a cada elemento del portafolio
-for (let i = 0; i < portfolioItem.length; i++) {
+portfolioItem.forEach(item => {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
 
-  portfolioItem[i].addEventListener("click", function (event) {
-    event.preventDefault(); // Evita la navegación predeterminada del enlace
+    // Actualizar la imagen, título, categoría, y SVG del modal
+    const mainImage = this.querySelectorAll("img")[1];
+    const dateValue = this.getAttribute("data-date");
+    const iconValue = this.getAttribute("data-icon");
 
-    // Asigna la imagen principal del portafolio (segundo <img> dentro de .project-img) al modal
-    const mainImage = this.querySelectorAll("img")[1]; // Selecciona la segunda imagen (logo-1.png)
-    modalImgPortfolio.src = mainImage.src; // Toma la src de la imagen principal
-    modalImgPortfolio.alt = mainImage.alt; // Toma el alt de la imagen principal
-    modalTitlePortfolio.innerHTML = this.querySelector(".project-title").innerHTML; // Toma el título del portafolio
+    modalImgPortfolio.src = mainImage.src;
+    modalImgPortfolio.alt = mainImage.alt;
+    modalTitlePortfolio.innerHTML = this.querySelector(".project-title").innerHTML;
+    modalCategoryPortfolio.innerHTML = "Categoría actual: " + this.getAttribute("data-category");
+    modalTimePortfolio.innerHTML = dateValue;
+    modalTimePortfolio.setAttribute("datetime", dateValue);
+    modalDescription.innerHTML = this.getAttribute("data-description");
+
+    // Actualiza el SVG en la parte superior del modal
+    modalIconContainer.innerHTML = iconValue;
 
     // Muestra el modal
     portfolioModalFunc();
   });
+});
 
-}
 
 // Cerrar el modal cuando se hace clic en el botón de cerrar o en el overlay
 modalCloseBtnPortfolio.addEventListener("click", portfolioModalFunc);
