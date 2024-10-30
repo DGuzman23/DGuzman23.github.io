@@ -55,7 +55,7 @@
   --purple: hsl(251, 100%, 76.5%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(267, 100%, 50%);
 
   /**
    * typography
@@ -630,15 +630,15 @@ main {
  * #testimonials 
  */
 
-.testimonials {
+.portfolio {
   margin-bottom: 30px;
 }
 
-.testimonials-title {
+.portfolio-title {
   margin-bottom: 20px;
 }
 
-.testimonials-list {
+.portfolio-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -791,6 +791,10 @@ main {
 .modal-title {
   margin-bottom: 4px;
 }
+.modal-content {
+  
+
+}
 
 .modal-content time {
   font-size: var(--fs-6);
@@ -805,6 +809,11 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.tools {
+  display: flex;
+  gap: 15px;
 }
 
 /*-----------------------------------*\
@@ -1712,8 +1721,7 @@ textarea.form-input::-webkit-resizer {
   /* testimonials modal */
 
   .portfolio-modal {
-    gap: 35px;
-    max-width: 900px;
+    max-width: 950px;
   }
 
   .modal-avatar-box img {
