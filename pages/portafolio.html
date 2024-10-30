@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#170735" />
+  <meta name="description" content="Author: Diego Guzmán, Portafolio con mis trabajos a lo largo de mi carrera universitaria en la UFG">
   <title>Portfolio</title>
 
   <!--
@@ -16,16 +17,15 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
 
   <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link defer 
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" rel="preload" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" rel="preload" href="https://fonts.gstatic.com" crossorigin />
+  <link defer href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" rel="preload" />
 </head>
 
 <body>
@@ -40,7 +40,7 @@
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box" id="avatar-box">
-          <img src="../assets/images/DG.png" alt="Diego Guzmán" width="80" id="avatar-image" />
+          <img src="../assets/images/DG.webp" alt="Diego Guzmán" width="80" id="avatar-image" />
         </figure>
 
         <div class="info-content">
@@ -48,7 +48,7 @@
           <p class="title">Diseñador Web</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" aria-label="Information" data-sidebar-btn>
           <span>Mostrar más información</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
             <path fill="currentColor"
@@ -231,7 +231,7 @@
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="../assets/images/icon-design.svg
-                " alt="Design web icon" width="100px" />
+                " alt="Design web icon" />
               </div>
 
               <div class="service-content-box">
@@ -247,7 +247,7 @@
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="../assets/images/icon-marketing.svg" alt="Marketing icon" width="100px" />
+                <img src="../assets/images/icon-marketing.svg" alt="Marketing icon"/>
               </div>
 
               <div class="service-content-box">
@@ -262,7 +262,7 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="../assets/images/icon-animated.svg" alt="Marketing icon" width="100px" />
+                <img src="../assets/images/icon-animated.svg" alt="Marketing icon"/>
               </div>
 
               <div class="service-content-box">
@@ -276,7 +276,7 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="../assets/images/icon-logo.svg" alt="Marketing icon" width="100px" />
+                <img src="../assets/images/icon-logo.svg" alt="Marketing icon"/>
               </div>
 
               <div class="service-content-box">
@@ -316,24 +316,24 @@
         <section class="projects">
           <ul class="filter-list">
             <li class="filter-item">
-              <button class="active" data-filter-btn>Todos</button>
+              <button class="active" aria-label="All" data-filter-btn>Todos</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Logos</button>
+              <button data-filter-btn aria-label="Logos">Logos</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Contenido para redes</button>
+              <button data-filter-btn aria-label="Social Network">Contenido para redes</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Diseño Web</button>
+              <button data-filter-btn aria-label="Web Desing">Diseño Web</button>
             </li>
           </ul>
 
           <div class="filter-select-box">
-            <button class="filter-select" data-select>
+            <button class="filter-select" aria-label="Category" data-select>
               <div class="select-value" data-selecct-value>
                 Selecciona una categoria
               </div>
@@ -345,19 +345,19 @@
 
             <ul class="select-list">
               <li class="select-item">
-                <button data-select-item>Todos</button>
+                <button data-select-item aria-label="All">Todos</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Logos</button>
+                <button data-select-item aria-label="Logos">Logos</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Contenido para redes</button>
+                <button data-select-item aria-label="All">Contenido para redes</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Diseño Web</button>
+                <button data-select-item aria-label="Social Network">Diseño Web</button>
               </li>
             </ul>
           </div>
@@ -798,7 +798,7 @@
           <div class="modal-container" data-modal-container-portfolio>
             <div class="overlay" data-overlay-portfolio></div>
             <section class="portfolio-modal">
-              <button class="modal-close-btn" data-modal-close-btn-portfolio>
+              <button class="modal-close-btn" aria-label="Modal" data-modal-close-btn-portfolio>
                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
                   <mask id="lineMdWatchOffTwotoneLoop0">
                     <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
@@ -1115,7 +1115,7 @@
             <textarea name="message" class="form-input" placeholder="Escríbeme tu mensaje" required
               data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" aria-label="Send Message" type="submit" disabled data-form-btn>
               <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
                 <path fill="currentColor" fill-rule="evenodd"
                   d="m16.245 7.76l5.172-5.171l-.003-.003c-1.187-1.187-3.436-.438-7.935 1.062L8.33 5.364C4.7 6.574 2.885 7.18 2.37 8.067a2.72 2.72 0 0 0 0 2.73c.515.888 2.33 1.493 5.96 2.704c.45.15.957.042 1.294-.291l5.506-5.455a.79.79 0 0 1 1.116.005"

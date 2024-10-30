@@ -608,6 +608,7 @@ main {
 }
 
 .service-icon-box img {
+  width: 100px;
   margin: auto;
 }
 

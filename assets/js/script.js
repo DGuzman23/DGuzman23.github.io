@@ -6,8 +6,8 @@ const avatarImage = document.getElementById("avatar-image");
 
 // Imágenes que se alternarán
 const images = [
-  "../assets/images/logo-dg.webp", // Imagen original
-  "../assets/images/DG.webp" // Otra imagen o SVG
+  "../assets/images/DG.webp", // Imagen original
+  "../assets/images/logo-dg.webp" // Otra imagen o SVG
 ];
 
 let currentImageIndex = 0;
