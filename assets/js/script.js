@@ -202,3 +202,38 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("[data-form]");
+  const inputs = form.querySelectorAll("[data-form-input]");
+  const submitButton = form.querySelector("[data-form-btn]");
+
+  // Habilitar o deshabilitar el botón de enviar
+  function toggleButtonState() {
+    const allFieldsFilled = Array.from(inputs).every(input => input.value.trim() !== "");
+    submitButton.disabled = !allFieldsFilled;
+  }
+
+  // Actualizar el estado del botón cada vez que cambia el valor de un campo
+  inputs.forEach(input => {
+    input.addEventListener("input", toggleButtonState);
+  });
+
+  // Manejar el envío del formulario
+  submitButton.addEventListener("click", function() {
+    const fullName = form.querySelector("input[name='fullname']").value.trim();
+    const message = form.querySelector("textarea[name='message']").value.trim();
+
+    // Construir el enlace mailto
+    const email = "designer.dg23@gmail.com";
+    const subject = encodeURIComponent("Mensaje de " + fullName);
+    const body = encodeURIComponent(message + "\n\nAtentamente,\n" + fullName);
+
+    // Abrir Gmail con el contenido preestablecido
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    // Opcional: Limpiar el formulario después de abrir el cliente de correo
+    form.reset();
+    submitButton.disabled = true;
+  });
+});
