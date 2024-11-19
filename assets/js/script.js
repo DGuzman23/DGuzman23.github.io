@@ -108,8 +108,6 @@ portfolioItem.forEach((item) => {
     if (isVideo) {
       // Crear el elemento <video> solo para el item específico
       const videoElement = document.createElement("video");
-      videoElement.width = 350; // Ajusta el ancho del video según tus necesidades
-      videoElement.height = 200; // Ajusta la altura del video según tus necesidades
       videoElement.controls = true;
 
       // Crear las etiquetas <source> para el video

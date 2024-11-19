@@ -150,6 +150,10 @@ button {
   text-align: left;
   cursor: pointer;
 }
+video{
+  width: 350px;
+  height: 200px;
+}
 
 input,
 textarea {
@@ -1410,6 +1414,10 @@ textarea.form-input::-webkit-resizer {
     margin-top: 60px;
     margin-bottom: 100px;
   }
+  video{
+    width: 350px;
+    height: 200px;
+  }
 
   /**
    * #SIDEBAR
@@ -1685,6 +1693,11 @@ textarea.form-input::-webkit-resizer {
    * REUSED STYLE
    */
 
+   video{
+    width: 350px;
+    height: 400px;
+  }
+
   .sidebar,
   article {
     width: 700px;
@@ -1790,6 +1803,8 @@ textarea.form-input::-webkit-resizer {
    * CUSTOM PROPERTY
    */
 
+
+
   :root {
     /**
     * shadow
@@ -1798,6 +1813,11 @@ textarea.form-input::-webkit-resizer {
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+  }
+
+  video{
+    width: 500px;
+    height: 275px;
   }
 
   /**
@@ -1898,6 +1918,10 @@ textarea.form-input::-webkit-resizer {
    * RESET
    */
 
+   video{
+    width: 500px;
+    height: 280px;
+  }
   body::-webkit-scrollbar {
     width: 20px;
   }
