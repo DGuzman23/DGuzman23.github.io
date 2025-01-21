@@ -142,6 +142,9 @@ time,
 span {
   display: block;
 }
+article>section>p>a{
+  display: contents;
+}
 
 button {
   font: inherit;
